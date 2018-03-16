@@ -10,20 +10,20 @@ describe ('Age', function(){
 describe ('Age', function(){
   it('should convert Earth age to age on Venus', function() {
     let age = new Age(35);
-    expect(age.ageOnVenus(35)).toEqual(21.7);
+    expect(age.ageOnVenus(35)).toEqual(22);
   });
 });
 
 describe ('Age', function(){
   it('should convert Earth age to age on Mars', function() {
     let age = new Age(35);
-    expect(age.ageOnMars(35)).toEqual(65.8);
+    expect(age.ageOnMars(35)).toEqual(66);
   });
 });
 
 describe ('Age', function(){
   it('should convert Earth age to age on Jupiter', function() {
     let age = new Age(35);
-    expect(age.ageOnJupiter(35)).toEqual(415.09999999999997);
+    expect(age.ageOnJupiter(35)).toEqual(415);
   });
 });

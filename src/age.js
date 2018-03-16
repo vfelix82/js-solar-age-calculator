@@ -20,19 +20,19 @@ export class Age {
   ageOnVenus(age)
   {
     let ageOnVenus = age * 0.62;
-    return ageOnVenus;
+    return Math.round(ageOnVenus);
   }
 
   ageOnMars(age)
   {
     let ageOnMars = age *1.88;
-    return ageOnMars;
+    return Math.round(ageOnMars);
   }
 
   ageOnJupiter(age)
   {
     let ageOnJupiter = age *11.86;
-    return ageOnJupiter;
+    return Math.round(ageOnJupiter);
   }
 
   lifeExpectancyOnMercury(age) {
