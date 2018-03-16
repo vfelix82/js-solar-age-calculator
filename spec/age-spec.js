@@ -1,6 +1,13 @@
 import { Age } from './../src/age.js';
 
 describe ('Age', function(){
+  it('should convert Earth age to Seconds', function() {
+    let age = new Age(35);
+    expect(age.inSeconds(35)).toEqual(1103760000);
+  });
+});
+
+describe ('Age', function(){
   it('should convert Earth age to age on Mercury', function() {
     let age = new Age(35);
     expect(age.ageOnMercury(35)).toEqual(8);
