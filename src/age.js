@@ -40,18 +40,18 @@ export class Age {
 
   lifeExpectancyOnEarth()
   {
-    let yearsLeftToLive = this.age;
+    let averageLifeExpectancy = 80;
 
     if (this.smoker == true) {
-      this.age += 5;
+      this.age -= 5;
     }
     else if (this.stress == true) {
-      this.age += 10;
+      this.age -= 10;
     }
     else if (this.diet == true) {
-      this.age += 15;
+      this.age -= 15;
     }
-    return yearsLeftToLive
+    return averageLifeExpectancy
   }
 
 }
