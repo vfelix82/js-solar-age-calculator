@@ -1,38 +1,57 @@
 export class Age {
 
-  constructor(age)
+  constructor(age, smoker, stress, diet)
   {
     this.age = age;
+    this.smoker = smoker;
+    this.stress = stress;
+    this.diet = diet;
   }
 
-  inSeconds(age)
+  inSeconds()
   {
-    let ageInSeconds = age * 31536000;
-    return (ageInSeconds);
+    let ageInSeconds = this.age * 31536000;
+    return ageInSeconds;
   }
 
-  ageOnMercury(age)
+  ageOnMercury()
   {
-    let ageOnMercury = age * 0.24;
+    let ageOnMercury = this.age * 0.24;
     return Math.round(ageOnMercury);
   }
 
-  ageOnVenus(age)
+  ageOnVenus()
   {
-    let ageOnVenus = age * 0.62;
+    let ageOnVenus = this.age * 0.62;
     return Math.round(ageOnVenus);
   }
 
-  ageOnMars(age)
+  ageOnMars()
   {
-    let ageOnMars = age *1.88;
+    let ageOnMars = this.age *1.88;
     return Math.round(ageOnMars);
   }
 
-  ageOnJupiter(age)
+  ageOnJupiter()
   {
-    let ageOnJupiter = age *11.86;
+    let ageOnJupiter = this.age *11.86;
     return Math.round(ageOnJupiter);
+  }
+
+  lifeExpectancyOnEarth()
+  {
+    let yearsLeftToLive = this.age;
+
+    if (this.smoker == true) {
+      this.age += 5;
+    }
+    else if (this.stress == true) {
+      this.age += 10;
+    }
+    else if (this.diet == true) {
+      this.age += 15;
+    }
+    return yearsLeftToLive
   }
 
 }

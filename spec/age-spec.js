@@ -34,3 +34,10 @@ describe ('Age', function(){
     expect(age.ageOnJupiter(35)).toEqual(415);
   });
 });
+
+describe ('Age', function(){
+  it('should show life expectancy on Earth', function() {
+    let age = new Age(35);
+    expect(age.lifeExpectancyOnEarth(35)).toEqual(35);
+  });
+});
